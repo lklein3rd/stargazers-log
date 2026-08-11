@@ -12,8 +12,8 @@
     <main id="app">
       <section id="starred">
         <h2>Starred repositories</h2>
-        <ul id="repos" class="repo-list" aria-live="polite"></ul>
-        <p id="empty" class="empty">No starred repositories found.</p>
+        <ul id="repos" class="repo-list" aria-live="polite" aria-atomic="true"></ul>
+        <p id="empty" class="empty" role="status" aria-live="polite">No starred repositories found.</p>
       </section>
     </main>
     <script src="script.js" defer></script>

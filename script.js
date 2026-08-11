@@ -13,9 +13,9 @@ function renderRepos(data){
   empty.style.display = 'none';
   // Sort newest first when starred_at present
   data.sort((a,b)=>{
-    const da = a.starred_at || a.starredAt || 0;
-    const db = b.starred_at || b.starredAt || 0;
-    return new Date(db) - new Date(da);
+    const da = Date.parse(a.starred_at || a.starredAt) || 0;
+    const db = Date.parse(b.starred_at || b.starredAt) || 0;
+    return db - da;
   });
   data.forEach(ev => {
     const repo = ev.repo || ev;
